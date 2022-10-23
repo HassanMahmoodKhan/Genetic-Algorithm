@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
 
 def population_initializer(pop_ind):
@@ -50,7 +49,6 @@ def population_initializer(pop_ind):
     return population
 
 
-# In[2]:
 
 
 def fitness(inputFile):
@@ -130,7 +128,6 @@ def CountColumnMismatches(first, second):
         return numberOfMismatches
 
 
-# In[3]:
 
 
 def randomizer(pop):# randomly swaps tiles of the original individual to create random copies of it. For population initialization purposes
@@ -149,7 +146,6 @@ def randomizer(pop):# randomly swaps tiles of the original individual to create 
     return arr
 
 
-# In[4]:
 
 
 def transform(pop):
@@ -172,7 +168,6 @@ def transform(pop):
     return file
 
 
-# In[5]:
 
 
 def transform_best(pop):
@@ -195,7 +190,6 @@ def transform_best(pop):
     return new_string
 
 
-# In[6]:
 
 
 def tournament_selection(pop,fitness_score, window_size):#funtions chooses k i.e., window_size number of individuals at random and chooses the fittest one
@@ -206,7 +200,6 @@ def tournament_selection(pop,fitness_score, window_size):#funtions chooses k i.e
     return pop[best]  #returns best individual after the tournament
 
 
-# In[7]:
 
 
 def mutation_swap(arr, mut_fac):#Swaps two random tiles with a certain probability
@@ -226,7 +219,6 @@ def mutation_swap(arr, mut_fac):#Swaps two random tiles with a certain probabili
     return array
 
 
-# In[8]:
 
 
 def mutation_rotate(arr, mut_fac):
@@ -242,7 +234,6 @@ def mutation_rotate(arr, mut_fac):
     return array
 
 
-# In[9]:
 
 
 def mutation_sort_a(arr, mut_fac):#sorts a tile (ascending order) within a row with a certain probability
@@ -253,7 +244,6 @@ def mutation_sort_a(arr, mut_fac):#sorts a tile (ascending order) within a row w
     return array
 
 
-# In[10]:
 
 
 def mutation_sort_d(arr, mut_fac):#sorts a tile (ascending order) within a row with a certain probability
@@ -264,7 +254,6 @@ def mutation_sort_d(arr, mut_fac):#sorts a tile (ascending order) within a row w
     return array
 
 
-# In[11]:
 
 
 #Survivor Selection
@@ -279,7 +268,6 @@ def survivor_selection(arr, fitness_score):#fitness based
     return worst_index
 
 
-# In[18]:
 
 
 def genetic_algorithm(pop_ind, n_iter, mut_r, mut_sw, mut_so_a, mut_so_d, k):
@@ -334,8 +322,6 @@ def genetic_algorithm(pop_ind, n_iter, mut_r, mut_sw, mut_so_a, mut_so_d, k):
     
 
 
-# In[24]:
-
 
 from numpy import random as random
 pop_ind = 50 # number of candidate solutions 
@@ -349,7 +335,7 @@ k = 2 # tournament selection window size
 genetic_algorithm(pop_ind, n_iter, mut_r, mut_sw, mut_so_a, mut_so_d, k)
 
 
-# In[ ]:
+
 
 
 
